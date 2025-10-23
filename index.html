@@ -94,12 +94,13 @@
           </ul>
         </div>
         <div class="hero-bg" aria-hidden="true">
-          <video autoplay loop muted playsinline class="hero-video">
-            <source
-              src="/public/vdo/3998279-uhd_2160_4096_25fps.mp4"
-              type="video/mp4"
-            />
-          </video>
+          <video
+            id="heroVideo"
+            autoplay
+            muted
+            playsinline
+            class="hero-video"
+          ></video>
         </div>
       </section>
 
@@ -165,15 +166,25 @@
                 <a href="#gallery" class="btn btn-ghost">Ergebnisse ansehen</a>
               </div>
             </div>
-            <div
-              class="feature-media placeholder-media"
-              style="
-                background-image: url('/pix2.jpg');
-                background-size: cover;
-                background-position: center;
-              "
-              aria-hidden="true"
-            ></div>
+            <div class="feature-media">
+              <div class="feature-gallery">
+                <img
+                  class="fg-img"
+                  src="/line_oa_chat_251023_201442.jpg"
+                  alt="Permanent Make-up – Ergebnis 1 (Powder Brows)"
+                />
+                <img
+                  class="fg-img"
+                  src="/line_oa_chat_251023_201457.jpg"
+                  alt="Permanent Make-up – Ergebnis 2 (Powder Brows)"
+                />
+                <img
+                  class="fg-img"
+                  src="/pix2.jpg"
+                  alt="Permanent Make-up – Beispielbild"
+                />
+              </div>
+            </div>
           </div>
         </div>
       </section>

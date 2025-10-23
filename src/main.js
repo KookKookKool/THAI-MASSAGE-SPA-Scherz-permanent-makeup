@@ -104,6 +104,34 @@ window.addEventListener('mousemove', (e) => {
   heroBg.style.transform = `translate3d(${x}px, ${y}px, 0)`;
 });
 
+// Hero background video playlist
+(function setupHeroPlaylist(){
+  const el = document.getElementById('heroVideo');
+  if (!el) return;
+  const playlist = [
+    '/public/vdo/Hero/3998263-uhd_4096_2160_25fps.mp4',
+    '/public/vdo/Hero/3998279-uhd_2160_4096_25fps.mp4',
+    '/public/vdo/Hero/6186727-uhd_2160_3840_25fps.mp4',
+    '/public/vdo/Hero/6629704-uhd_2160_4096_25fps.mp4',
+    '/public/vdo/Hero/6629720-uhd_4096_2160_25fps.mp4',
+    '/public/vdo/Hero/6750890-hd_1920_1080_25fps.mp4',
+    '/public/vdo/Hero/854399-hd_1280_720_24fps.mp4',
+  ];
+  let i = 0;
+  const load = (idx) => {
+    el.src = playlist[idx];
+    // ensure plays on mobile (muted already)
+    const p = el.play();
+    if (p) p.catch(() => {/* ignore autoplay block for background */});
+  };
+  el.addEventListener('ended', () => {
+    i = (i + 1) % playlist.length; // next video, loop
+    load(i);
+  });
+  // Start with the first item
+  load(i);
+})();
+
 // Button glow follows cursor
 document.querySelectorAll('.btn-primary').forEach((btn) => {
   btn.addEventListener('pointermove', (e) => {
