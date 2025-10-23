@@ -115,6 +115,29 @@ document.querySelectorAll('.btn-primary').forEach((btn) => {
   });
 });
 
+// Auto-play background music
+const bgMusic = document.getElementById('bgMusic');
+if (bgMusic) {
+  // Try to play immediately
+  const playPromise = bgMusic.play();
+  
+  if (playPromise !== undefined) {
+    playPromise.catch(() => {
+      // Auto-play was prevented, play on first user interaction
+      const playOnInteraction = () => {
+        bgMusic.play();
+        document.removeEventListener('click', playOnInteraction);
+        document.removeEventListener('touchstart', playOnInteraction);
+        document.removeEventListener('scroll', playOnInteraction);
+      };
+      
+      document.addEventListener('click', playOnInteraction);
+      document.addEventListener('touchstart', playOnInteraction);
+      document.addEventListener('scroll', playOnInteraction);
+    });
+  }
+}
+
 // Subtle tilt on cards
 const tiltable = document.querySelectorAll('.card, .price-card, .g-item');
 tiltable.forEach((el) => {
