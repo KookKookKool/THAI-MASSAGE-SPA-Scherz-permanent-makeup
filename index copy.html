@@ -1,0 +1,501 @@
+<!DOCTYPE html>
+<html lang="de">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>THAI MASSAGE & SPA | Permanent Make-up</title>
+    <meta
+      name="description"
+      content="Thai-Massage, Spa und Permanent Make-up – alles aus einer Hand. Jetzt Termin anfragen per Telefon, LINE oder WhatsApp."
+    />
+    <meta name="theme-color" content="#0b0b0b" />
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans+Thai:wght@300;400;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <meta property="og:type" content="website" />
+    <meta
+      property="og:title"
+      content="THAI MASSAGE & SPA | Permanent Make-up"
+    />
+    <meta
+      property="og:description"
+      content="Thai-Massage, Öl-Massage, Spa, Nägel/Wimpern und Permanent Make-up – alles in einem Salon."
+    />
+    <meta property="og:image" content="/og-image.jpg" />
+    <meta property="og:url" content="/" />
+
+    <script type="module" src="/src/main.js"></script>
+  </head>
+  <body>
+    <header class="site-header" aria-label="Kopfbereich">
+      <div class="container header-inner">
+        <a class="brand" href="#hero" aria-label="Startseite">
+          <img
+            src="/logo.png"
+            alt="Logo THAI MASSAGE & SPA"
+            class="brand-logo"
+          />
+          <span class="brand-name">THAI MASSAGE & SPA</span>
+        </a>
+        <nav class="nav" aria-label="Hauptnavigation">
+          <button
+            class="nav-toggle"
+            aria-label="Menü umschalten"
+            aria-expanded="false"
+            aria-controls="primary-menu"
+          >
+            ☰
+          </button>
+          <ul id="primary-menu" class="nav-list">
+            <li><a href="#services">Leistungen</a></li>
+            <li><a href="#makeup">Permanent Make-up</a></li>
+            <li><a href="#promos">Angebote</a></li>
+            <li><a href="#gallery">Galerie</a></li>
+            <li><a href="#docs">Dokumente</a></li>
+            <li><a href="#pricing">Preise</a></li>
+            <li><a href="#reviews">Bewertungen</a></li>
+            <li><a href="#location">Standort</a></li>
+            <li>
+              <a href="#contact" class="btn btn-primary">Termin buchen</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+      <div class="scroll-progress" aria-hidden="true"><span></span></div>
+    </header>
+
+    <main>
+      <!-- HERO -->
+      <section id="hero" class="section hero" aria-label="Hero">
+        <div class="container hero-inner">
+          <div class="hero-badge">Premium Betreuung</div>
+          <h1>
+            Thai-Massage & Spa aus einer Hand<br /><span class="accent"
+              >plus Permanent Make-up</span
+            >
+          </h1>
+          <p class="lead">
+            Entspannung auf höchstem Niveau – mit Sorgfalt, Hygiene und einer
+            ruhigen Atmosphäre.
+          </p>
+          <div class="cta-row">
+            <a href="#contact" class="btn btn-primary">Jetzt Termin sichern</a>
+            <a href="#docs" class="btn btn-ghost">Alle Leistungen ansehen</a>
+          </div>
+          <ul class="hero-highlights">
+            <li>Professionelles Team</li>
+            <li>Sauber & hygienisch</li>
+            <li>Entspannte Atmosphäre</li>
+          </ul>
+        </div>
+        <div class="hero-bg" aria-hidden="true">
+          <video
+            id="heroVideo"
+            autoplay
+            muted
+            playsinline
+            preload="auto"
+            crossorigin="anonymous"
+            class="hero-video"
+          ></video>
+        </div>
+      </section>
+
+      <!-- SERVICES -->
+      <section id="services" class="section" aria-label="Leistungen">
+        <div class="container">
+          <h2>Beliebte Leistungen</h2>
+          <div class="cards-grid">
+            <article class="card">
+              <h3>Thai-Massage</h3>
+              <p>
+                Löst Verspannungen, fördert die Durchblutung – ideal bei
+                Alltagsbelastung.
+              </p>
+              <div class="meta">60–120 Min</div>
+            </article>
+            <article class="card">
+              <h3>Öl-/Aroma-Massage</h3>
+              <p>
+                Sanfte Entspannung mit Düften – reduziert Stress und bringt
+                Balance.
+              </p>
+              <div class="meta">60–120 Min</div>
+            </article>
+            <article class="card">
+              <h3>Hand- & Fuß-Spa</h3>
+              <p>
+                Peeling, Pflege und Massage – für samtweiche, gepflegte Haut.
+              </p>
+              <div class="meta">45–90 Min</div>
+            </article>
+            <article class="card">
+              <h3>Wimpern / Gel-Nägel</h3>
+              <p>
+                Natürlicher Look, lange Haltbarkeit, hochwertige Materialien.
+              </p>
+              <div class="meta">nach Paket</div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- PERMANENT MAKEUP -->
+      <section
+        id="makeup"
+        class="section section-alt"
+        aria-label="Permanent Make-up"
+      >
+        <div class="container">
+          <h2>Permanent Make-up (Augenbrauen)</h2>
+          <div class="feature">
+            <div class="feature-text">
+              <h3>Form und Farbe – perfekt auf Sie abgestimmt</h3>
+              <ul class="list">
+                <li>Microblading / Powder Brows / Hybrid</li>
+                <li>Hautverträgliche, langanhaltende Farben</li>
+                <li>Beratung zu Gesichtsform & Farbtönen</li>
+              </ul>
+              <div class="cta-row">
+                <a href="#pricing" class="btn btn-primary"
+                  >Pakete & Preise ansehen</a
+                >
+                <a href="#gallery" class="btn btn-ghost">Ergebnisse ansehen</a>
+              </div>
+            </div>
+            <div class="feature-media">
+              <div class="feature-gallery">
+                <img
+                  class="fg-img"
+                  src="/line_oa_chat_251023_201442.jpg"
+                  alt="Permanent Make-up – Ergebnis 1 (Powder Brows)"
+                />
+                <img
+                  class="fg-img"
+                  src="/line_oa_chat_251023_201457.jpg"
+                  alt="Permanent Make-up – Ergebnis 2 (Powder Brows)"
+                />
+                <img
+                  class="fg-img"
+                  src="/pix2.jpg"
+                  alt="Permanent Make-up – Beispielbild"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- PROMOTIONS -->
+      <section id="promos" class="section" aria-label="Angebote">
+        <div class="container">
+          <h2>Angebote</h2>
+          <div class="cards-grid">
+            <article class="card promo">
+              <h3>Thai-Massage 90 Min</h3>
+              <p>
+                Tiefenentspannung für Rücken und Schultern – jetzt Termin
+                anfragen
+              </p>
+            </article>
+            <article class="card promo">
+              <h3>Fuß-Spa + Schulter-Massage</h3>
+              <p>Wohlfühl-Kombi – ideal zum Abschalten</p>
+            </article>
+            <article class="card promo">
+              <h3>Powder Brows</h3>
+              <p>Unverbindliche Beratung – Form und Farbe gemeinsam planen</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- DOCUMENTS -->
+      <section
+        id="docs"
+        class="section section-alt"
+        aria-label="Broschüre & Angebote"
+      >
+        <div class="container">
+          <h2>Prospekt (Massage & Spa)</h2>
+          <div class="doc-images">
+            <!-- โปรดวางไฟล์รูปลงใน public/ ตามชื่อด้านล่าง เพื่อให้แสดงเต็มความกว้าง -->
+            <img
+              class="doc-img"
+              src="/brochure-1.png"
+              alt="Prospekt Seite 1 – Thai Massage & Spa, Permanent Make-up, Öffnungszeiten und Kontakt"
+            />
+            <img
+              class="doc-img"
+              src="/brochure-2.png"
+              alt="Prospekt Seite 2 – Leistungen, Angebote und Preise"
+            />
+            <div class="doc-img-row">
+              <img
+                class="doc-img"
+                src="/rm1.jpg"
+                alt="Behandlungsraum 1 – Thai Massage & Spa"
+              />
+              <img
+                class="doc-img"
+                src="/rm2.jpg"
+                alt="Behandlungsraum 2 – Thai Massage & Spa"
+              />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- GALLERY -->
+      <section id="gallery" class="section section-alt" aria-label="Galerie">
+        <div class="container">
+          <h2>Galerie</h2>
+          <div class="gallery-grid">
+            <div
+              class="g-item"
+              aria-label="Aromatherapie Flasche"
+              style="
+                background-image: url('/pix/closeup-man-having-back-massage-spa-treatment-wellness-center.jpg');
+              "
+            ></div>
+            <div
+              class="g-item"
+              aria-label="Thai-Massage Ruheposition"
+              style="
+                background-image: url('/pix/woman-getting-massage-from-another-person.jpg');
+              "
+            ></div>
+            <div
+              class="g-item"
+              aria-label="Hand & Sonne – Wellness"
+              style="background-image: url('/pix/woman-relaxing-spa.jpg')"
+            ></div>
+            <div
+              class="g-item"
+              aria-label="Rückenmassage"
+              style="
+                background-image: url('/pix/woman-taking-bath-salt-put-some-water-before-taking-bath_23-2149239352.jpg');
+              "
+            ></div>
+            <div
+              class="g-item"
+              aria-label="Entspannung im Salon"
+              style="
+                background-image: url('/pix/young-european-woman-enjoying-relaxation-atmosphere-full-body-massage-spa-room-decorated_726520-1181.jpg');
+              "
+            ></div>
+            <div
+              class="g-item"
+              aria-label="Duftkerze – Spa Atmosphäre"
+              style="
+                background-image: url('/pix/young-woman-having-face-massage-relaxing-spa-salon_176420-7546.jpg');
+              "
+            ></div>
+          </div>
+        </div>
+      </section>
+
+      <!-- PRICING -->
+      <section id="pricing" class="section" aria-label="Preise">
+        <div class="container">
+          <h2>Pakete & Preise</h2>
+          <div class="pricing-grid">
+            <article class="price-card">
+              <h3>Thai-Massage</h3>
+              <ul>
+                <li>60 Min — €55</li>
+                <li>90 Min — €80</li>
+              </ul>
+            </article>
+            <article class="price-card">
+              <h3>Öl-/Aroma-Massage</h3>
+              <ul>
+                <li>60 Min — €60</li>
+                <li>90 Min — €85</li>
+              </ul>
+            </article>
+            <article class="price-card">
+              <h3>Permanent Make-up</h3>
+              <ul>
+                <li>Weitere Informationen — bitte anfragen</li>
+              </ul>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- REVIEWS -->
+      <section
+        id="reviews"
+        class="section section-alt"
+        aria-label="Bewertungen"
+      >
+        <div class="container">
+          <h2>Kundenbewertungen</h2>
+          <div class="reviews">
+            <blockquote>
+              Sehr sanfte Hände – ich bin während der Behandlung eingeschlafen.
+              – <b>Mai</b>
+            </blockquote>
+            <blockquote>
+              Natürliche Brauenform, super Ergebnis – sehr zufrieden. –
+              <b>Fah</b>
+            </blockquote>
+            <blockquote>
+              Sauberer Salon, tolle Atmosphäre und top Massage. – <b>Jay</b>
+            </blockquote>
+          </div>
+        </div>
+      </section>
+
+      <!-- LOCATION -->
+      <section
+        id="location"
+        class="section"
+        aria-label="Standort & Öffnungszeiten"
+      >
+        <div class="container">
+          <h2>Standort & Öffnungszeiten</h2>
+          <div class="location-grid">
+            <div>
+              <p>
+                <b>Adresse:</b><br />
+                Scherz<br />
+                Feldbergstrasse 2d<br />
+                61194 Niddatal<br />
+                Germany
+              </p>
+              <p><b>Öffnungszeiten:</b> Täglich 10:00–20:00 (anpassbar)</p>
+              <ul class="list">
+                <li>Parkmöglichkeiten vorhanden</li>
+                <li>Kartenzahlung/Überweisung möglich</li>
+              </ul>
+              <div class="music-player">
+                <audio id="bgMusic" loop controls>
+                  <source
+                    src="http://rawiethai.com/wp-content/uploads/2024/01/Thai-Contemporary-Music-Sukho-Thai-สโขทย-นก-กอไผ-เพลงไทยเดมประกอบละครดง.mp3"
+                    type="audio/mpeg"
+                  />
+                  Your browser does not support the audio element.
+                </audio>
+              </div>
+            </div>
+            <div class="map-embed">
+              <!-- Google Maps Embed: Feldbergstraße 2D, 61194 Niddatal -->
+              <iframe
+                title="Karte"
+                src="https://www.google.com/maps?q=Feldbergstraße+2D,+61194+Niddatal&output=embed"
+                loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade"
+              ></iframe>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- CONTACT -->
+      <section
+        id="contact"
+        class="section section-accent"
+        aria-label="Kontakt & Termin"
+      >
+        <div class="container">
+          <div class="contact-header">
+            <h2>Kontakt & Termin</h2>
+            <p class="contact-subtitle">
+              Rufen oder schreiben Sie uns – wir vereinbaren Ihren Wunschtermin.
+            </p>
+          </div>
+          <div class="contact-grid">
+            <div class="contact-info">
+              <div class="cta-row">
+                <a class="btn btn-primary" href="tel:+4917614676288"
+                  >Tel. 0176-146-76288</a
+                >
+                <a
+                  class="btn btn-ghost"
+                  href="https://line.me/R/ti/p/@yourlineid"
+                  target="_blank"
+                  rel="noopener"
+                  >LINE @yourlineid</a
+                >
+                <a
+                  class="btn btn-ghost"
+                  href="https://wa.me/4917614676288"
+                  target="_blank"
+                  rel="noopener"
+                  >WhatsApp</a
+                >
+              </div>
+              <div class="social-row">
+                <a
+                  class="btn btn-social insta"
+                  href="https://instagram.com/yourinstagram"
+                  target="_blank"
+                  rel="noopener"
+                  aria-label="Instagram"
+                >
+                  <svg class="icon" viewBox="0 0 24 24" aria-hidden="true">
+                    <path
+                      fill="currentColor"
+                      d="M12 7a5 5 0 1 0 0 10a5 5 0 0 0 0-10Zm0 8a3 3 0 1 1 0-6a3 3 0 0 1 0 6Zm6.5-8.75a1.25 1.25 0 1 0 0-2.5a1.25 1.25 0 0 0 0 2.5ZM12 2c-2.65 0-2.98.01-4.02.06c-1.04.05-1.75.22-2.37.47c-.64.25-1.19.6-1.73 1.14c-.54.54-.89 1.09-1.14 1.73c-.25.62-.42 1.33-.47 2.37C2.01 9.02 2 9.35 2 12s.01 2.98.06 4.02c.05 1.04.22 1.75.47 2.37c.25.64.6 1.19 1.14 1.73c.54.54 1.09.89 1.73 1.14c.62.25 1.33.42 2.37.47C9.02 21.99 9.35 22 12 22s2.98-.01 4.02-.06c1.04-.05 1.75-.22 2.37-.47c.64-.25 1.19-.6 1.73-1.14c.54-.54.89-1.09 1.14-1.73c.25-.62.42-1.33.47-2.37c.05-1.04.06-1.37.06-4.02s-.01-2.98-.06-4.02c-.05-1.04-.22-1.75-.47-2.37c-.25-.64-.6-1.19-1.14-1.73a4.9 4.9 0 0 0-1.73-1.14c-.62-.25-1.33-.42-2.37-.47C14.98 2.01 14.65 2 12 2Z"
+                    />
+                  </svg>
+                  Instagram
+                </a>
+                <a
+                  class="btn btn-social fb"
+                  href="https://facebook.com/yourfacebook"
+                  target="_blank"
+                  rel="noopener"
+                  aria-label="Facebook"
+                >
+                  <svg class="icon" viewBox="0 0 24 24" aria-hidden="true">
+                    <path
+                      fill="currentColor"
+                      d="M13 22v-8h3l1-4h-4V7.5c0-1.16.32-1.95 2-1.95H17V2.14C16.53 2.09 15.5 2 14.32 2C11.76 2 10 3.66 10 7v3H7v4h3v8h3Z"
+                    />
+                  </svg>
+                  Facebook
+                </a>
+              </div>
+            </div>
+            <div class="contact-video">
+              <video autoplay loop muted playsinline class="demo-video">
+                <source
+                  src="/public/vdo/line_oa_chat_251023_183031.mp4"
+                  type="video/mp4"
+                />
+                Your browser does not support the video tag.
+              </video>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer" aria-label="Fußbereich">
+      <div class="container footer-inner">
+        <div class="footer-brand">
+          <img src="/logo.png" alt="Logo THAI MASSAGE & SPA" />
+          <div>
+            <strong>THAI MASSAGE & SPA</strong>
+            <p class="muted">Entspannen Sie Körper und Geist an einem Ort.</p>
+          </div>
+        </div>
+        <div class="footer-right">
+          <a href="#hero">Nach oben</a>
+        </div>
+      </div>
+      <div class="container small muted">
+        © <span id="year"></span> Alle Rechte vorbehalten. Aktualisieren Sie den
+        offiziellen
+      </div>
+    </footer>
+  </body>
+</html>
