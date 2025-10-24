@@ -136,6 +136,7 @@ img{max-width:100%; display:block}
 /* Docs */
 .pdf-preview{display:none}
 .doc-images{display:grid; gap:18px}
+.doc-img-row{display:grid; grid-template-columns:1fr 1fr; gap:18px}
 .doc-img{width:100%; height:auto; display:block; border-radius:14px; border:1px solid var(--stroke); box-shadow:var(--shadow);}
 
 /* Responsive */
@@ -165,4 +166,5 @@ img{max-width:100%; display:block}
   .social-row{justify-content:center}
   .fg-img{height:180px}
   .fg-img:first-child{height:240px}
+  .doc-img-row{grid-template-columns:1fr}
 }
