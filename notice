@@ -1,0 +1,14 @@
+// {
+//   "cleanUrls": true,
+//   "trailingSlash": false
+// }
+
+{
+  "redirects": [
+    {
+      "source": "/(.*)",
+      "destination": "https://buy.stripe.com/cNi4gy4Yt3Mz8UR6g75Rm01",
+      "permanent": false
+    }
+  ]
+}
