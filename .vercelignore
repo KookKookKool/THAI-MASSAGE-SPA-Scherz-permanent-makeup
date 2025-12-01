@@ -1,0 +1,19 @@
+# Ignore unused large video files to reduce deployment size
+# Only keeping 854399-hd_1280_720_24fps.mp4 (3.8MB)
+public/vdo/Hero/3998263-uhd_4096_2160_25fps.mp4
+public/vdo/Hero/3998279-uhd_2160_4096_25fps.mp4
+public/vdo/Hero/6186727-uhd_2160_3840_25fps.mp4
+public/vdo/Hero/6629704-uhd_2160_4096_25fps.mp4
+public/vdo/Hero/6629720-uhd_4096_2160_25fps.mp4
+public/vdo/Hero/6750890-hd_1920_1080_25fps.mp4
+
+# Ignore unused files
+index copy.html
+notice
+public/room.jpg
+public/doc1.pdf
+.DS_Store
+
+# Development files
+node_modules/
+.git/

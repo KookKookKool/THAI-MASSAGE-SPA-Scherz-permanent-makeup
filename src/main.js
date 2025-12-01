@@ -114,68 +114,14 @@ window.addEventListener('mousemove', (e) => {
   el.playsInline = true;
   el.setAttribute('playsinline', '');
 
-  // Try both correct public base ('/vdo/...') and fallback ('/public/vdo/...')
-  const files = [
-    '3998263-uhd_4096_2160_25fps.mp4',
-    '3998279-uhd_2160_4096_25fps.mp4',
-    '6186727-uhd_2160_3840_25fps.mp4',
-    '6629704-uhd_2160_4096_25fps.mp4',
-    '6629720-uhd_4096_2160_25fps.mp4',
-    '6750890-hd_1920_1080_25fps.mp4',
-    '854399-hd_1280_720_24fps.mp4',
-  ];
-  const variants = (name) => [`/vdo/Hero/${name}`, `/public/vdo/Hero/${name}`];
-  const playlist = files.map(variants);
-
-  let vi = 0;       // video index
-  let ai = 0;       // source variant index
-  let stallTimer;   // timeout to skip stalled loads
-
-  const clearStall = () => { if (stallTimer) { clearTimeout(stallTimer); stallTimer = null; } };
-
-  const nextVideo = () => {
-    clearStall();
-    ai = 0; // reset source variant for next video
-    vi = (vi + 1) % playlist.length;
-    loadCurrent();
-  };
-
-  const tryNextVariant = () => {
-    clearStall();
-    ai += 1;
-    if (ai < playlist[vi].length) {
-      loadCurrent();
-    } else {
-      nextVideo();
-    }
-  };
-
-  const loadCurrent = () => {
-    const src = playlist[vi][ai];
-    el.src = src;
-    // start a stall timer (e.g., 5s) to skip if it doesn't load
-    stallTimer = setTimeout(tryNextVariant, 5000);
-    const p = el.play();
-    if (p) p.catch(() => {/* ignore autoplay block for muted background */});
-  };
-
-  // When playable, clear stall timer
-  el.addEventListener('canplay', clearStall);
-  el.addEventListener('loadeddata', clearStall);
-  // On normal end, go to next video
-  el.addEventListener('ended', nextVideo);
-  // Handle errors/stalls
-  el.addEventListener('error', tryNextVariant);
-  el.addEventListener('stalled', tryNextVariant);
-  el.addEventListener('abort', tryNextVariant);
-  el.addEventListener('waiting', () => {
-    // if waiting persists, timer will swap variant
-    clearStall();
-    stallTimer = setTimeout(tryNextVariant, 5000);
-  });
-
-  // Kick off
-  loadCurrent();
+  // Optimized: Use only 1 video (smallest file: 3.8MB) to minimize data transfer
+  const videoSrc = '/vdo/Hero/854399-hd_1280_720_24fps.mp4';
+  
+  el.src = videoSrc;
+  el.loop = true; // Loop the single video
+  
+  const p = el.play();
+  if (p) p.catch(() => {/* ignore autoplay block for muted background */});
 })();
 
 // Button glow follows cursor
