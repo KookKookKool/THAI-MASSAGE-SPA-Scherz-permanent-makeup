@@ -171,3 +171,62 @@ tiltable.forEach((el) => {
     el.style.transform = '';
   });
 });
+
+// Lazy-load and play videos only when visible (reduces initial load)
+(function setupLazyPlayVideos(){
+  const lazyVideos = Array.from(document.querySelectorAll('video[data-lazy-play="true"]'));
+  if (lazyVideos.length === 0) return;
+
+  const ensureLoaded = (video) => {
+    const source = video.querySelector('source[data-src]');
+    if (!source) return;
+    const alreadySet = source.getAttribute('src');
+    if (alreadySet) return;
+    const nextSrc = source.getAttribute('data-src');
+    if (!nextSrc) return;
+    source.setAttribute('src', nextSrc);
+    video.load();
+  };
+
+  const playVideo = (video) => {
+    ensureLoaded(video);
+    const p = video.play();
+    if (p) p.catch(() => {/* ignore autoplay blocks */});
+  };
+
+  const pauseVideo = (video) => {
+    video.pause();
+  };
+
+  // Ensure consistent autoplay eligibility (muted + playsinline)
+  lazyVideos.forEach((v) => {
+    v.preload = 'none';
+    v.muted = true;
+    v.setAttribute('muted', '');
+    v.playsInline = true;
+    v.setAttribute('playsinline', '');
+  });
+
+  if (!('IntersectionObserver' in window)) {
+    // Fallback: load when script runs, but don't force playback
+    lazyVideos.forEach((v) => ensureLoaded(v));
+    return;
+  }
+
+  const observer = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        const video = entry.target;
+        if (entry.isIntersecting) playVideo(video);
+        else pauseVideo(video);
+      });
+    },
+    { threshold: 0.35 }
+  );
+
+  lazyVideos.forEach((v) => observer.observe(v));
+
+  document.addEventListener('visibilitychange', () => {
+    if (document.hidden) lazyVideos.forEach((v) => v.pause());
+  });
+})();
